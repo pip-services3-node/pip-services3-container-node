@@ -9,15 +9,15 @@ The framework provides a light-weight container that can be embedded inside a se
 as a system process, for example. Container configuration serves as a recipe for instantiating and configuring components inside the container.  
 The default container factory provides generic functionality on-demand, such as logging and performance monitoring.
 
-- [**Core**](https://rawgit.com/pip-services-node/pip-services-container-node/master/doc/api/modules/core.html) - Component container and container as a system process
-- [**Build**](https://rawgit.com/pip-services-node/pip-services-container-node/master/doc/api/modules/build.html) - Container default factory
-- [**Config**](https://rawgit.com/pip-services-node/pip-services-container-node/master/doc/api/modules/config.html) - Container configuration
-- [**Refer**](https://rawgit.com/pip-services-node/pip-services-container-node/master/doc/api/modules/refer.html) - Container references
+- [**Core**]() - Component container and container as a system process
+- [**Build**]() - Container default factory
+- [**Config**]() - Container configuration
+- [**Refer**]() - Container references
 
 Quick Links:
 
 * [Downloads](https://github.com/pip-services-node/pip-services-container-node/blob/master/doc/Downloads.md)
-* [API Reference](https://rawgit.com/pip-services-node/pip-services-container-node/master/doc/api/globals.html)
+* [API Reference]()
 * [Building and Testing](https://github.com/pip-services/pip-services-container-node/blob/master/doc/Development.md)
 * [Contributing](https://github.com/pip-services/pip-services-container-node/blob/master/doc/Development.md/#contrib)
 
