@@ -44,8 +44,8 @@
         "@types/async": "^2.0.0",
         "@types/mocha": "*",
         "@types/chai": "*",
-        "mocha": "*",
-        "chai": "*",
+        "chai": "^3.5.0",
+        "mocha": "^2.2.0",
         "typedoc": "^0.11.1",
         "typedoc-plugin-external-module-name": "git+https://github.com/hobbyguy77/typedoc-plugin-external-module-name.git"
     }
