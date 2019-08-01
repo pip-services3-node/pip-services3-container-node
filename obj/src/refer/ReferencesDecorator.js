@@ -24,7 +24,7 @@ class ReferencesDecorator {
      * @param component a component reference to be added.
      */
     put(locator, component) {
-        this.nextReferences.put(locator, component);
+        return this.nextReferences.put(locator, component);
     }
     /**
      * Removes a previously added reference that matches specified locator.

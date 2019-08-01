@@ -37,7 +37,7 @@ export class ReferencesDecorator implements IReferences {
 	 * @param component a component reference to be added.
 	 */
 	public put(locator: any, component: any): any {
-		this.nextReferences.put(locator, component);
+		return this.nextReferences.put(locator, component);
 	}
 	
 	/**
