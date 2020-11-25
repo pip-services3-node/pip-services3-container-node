@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>refer | pip-services-container-node</title>
+	<title>refer | pip-services3-container-node</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">pip-services-container-node</a>
+					<a href="../index.html" class="title">pip-services3-container-node</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -68,16 +68,16 @@
 				<div class="tsd-comment tsd-typography">
 					<p>Provides the inversion of control design pattern but does not contain the fully
 					functional container (we can just only create a class that will set various references).</p>
-					<p>Once the objects of a container are configured, if they implement the <a href="https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.ireferenceable.html" class="external">IReferencable interface</a>,
+					<p>Once the objects of a container are configured, if they implement the <a href="https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.ireferenceable.html" class="external">IReferencable interface</a>,
 						they are passed a set of references for recreating links between objects in the container. If
-						objects implement the <a href="https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/run.iopenable.html" class="external">IOpenable interface</a>,
+						objects implement the <a href="https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/run.iopenable.html" class="external">IOpenable interface</a>,
 						the <code>open()</code> method is called and they
 						start to work. Connections to various services are made, after which the objects start, the
 						container starts running, and the objects carry out their tasks. When the container
-						starts to close, the objects that implement the <a href="https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/run.iclosable.html" class="external">ICloseable interface</a>
+						starts to close, the objects that implement the <a href="https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/run.iclosable.html" class="external">ICloseable interface</a>
 						are closed via their
 						<code>close()</code> method (which should make them stop working and disconnect from other services),
-						after which objects that implement the <a href="https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.iunreferenceable.html" class="external">IUnreferencable interface</a>
+						after which objects that implement the <a href="https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.iunreferenceable.html" class="external">IUnreferencable interface</a>
 					delete various links between objects, and, finally, the contains destroys all objects and turns off.</p>
 					<p><a href="../classes/refer.buildreferencesdecorator.html">Build</a>, <a href="../classes/refer.linkreferencesdecorator.html">Link</a>, and
 						<a href="../classes/refer.runreferencesdecorator.html">Run</a> - ReferenceDecorators are used during the corresponding
