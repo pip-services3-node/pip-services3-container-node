@@ -28,13 +28,13 @@ import { ContainerReferences } from './refer/ContainerReferences';
  * 
  * On container start it performs the following actions:
  * - Creates components using their types or calls registered factories to create components using their locators
- * - Configures components that implement [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/config.iconfigurable.html IConfigurable interface]] and passes them their configuration parameters
- * - Sets references to components that implement [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.ireferenceable.html IReferenceable interface]] and passes them references of all components in the container
- * - Opens components that implement [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/run.iopenable.html IOpenable interface]]
+ * - Configures components that implement [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/config.iconfigurable.html IConfigurable interface]] and passes them their configuration parameters
+ * - Sets references to components that implement [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.ireferenceable.html IReferenceable interface]] and passes them references of all components in the container
+ * - Opens components that implement [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/run.iopenable.html IOpenable interface]]
  * 
  * On container stop actions are performed in reversed order:
- * - Closes components that implement [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/run.iclosable.html ICloseable interface]]
- * - Unsets references in components that implement [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.iunreferenceable.html IUnreferenceable interface]]
+ * - Closes components that implement [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/run.iclosable.html ICloseable interface]]
+ * - Unsets references in components that implement [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.iunreferenceable.html IUnreferenceable interface]]
  * - Destroys components in the container.
  * 
  * The component configuration can be parameterized by dynamic values. That allows specialized containers
@@ -43,9 +43,9 @@ import { ContainerReferences } from './refer/ContainerReferences';
  * The container automatically creates a ContextInfo component that carries detail information
  * about the container and makes it available for other components.
  * 
- * @see [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/config.iconfigurable.html IConfigurable]] (in the PipServices "Commons" package)
- * @see [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.ireferenceable.html IReferenceable]] (in the PipServices "Commons" package)
- * @see [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/run.iopenable.html IOpenable]] (in the PipServices "Commons" package)
+ * @see [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/config.iconfigurable.html IConfigurable]] (in the PipServices "Commons" package)
+ * @see [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.ireferenceable.html IReferenceable]] (in the PipServices "Commons" package)
+ * @see [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/run.iopenable.html IOpenable]] (in the PipServices "Commons" package)
  * 
  * ### Configuration parameters ###
  * 

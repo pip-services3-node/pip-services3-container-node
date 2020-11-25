@@ -5,7 +5,7 @@ import { IReferences } from 'pip-services3-commons-node';
  * Chainable decorator for IReferences that allows to inject additional capabilities
  * such as automatic component creation, automatic registration and opening.
  * 
- * @see [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.ireferences.html IReferences]] (in the PipServices "Commons" package)
+ * @see [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.ireferenceable.html IReferences]] (in the PipServices "Commons" package)
  */
 export class ReferencesDecorator implements IReferences {
 	
