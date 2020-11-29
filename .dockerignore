@@ -2,9 +2,9 @@
 /.git
 /.gitignore
 /.dockerignore
-/doc
+/docs
 /node_modules
-/doc
-/docker
+/docker/Dockerfile*
+/docker/docker-compose*.yml
 /*.sh
 /*.ps1
