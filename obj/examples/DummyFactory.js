@@ -9,7 +9,7 @@ class DummyFactory extends pip_services3_components_node_1.Factory {
         this.registerAsType(DummyFactory.ControllerDescriptor, DummyController_1.DummyController);
     }
 }
+exports.DummyFactory = DummyFactory;
 DummyFactory.Descriptor = new pip_services3_commons_node_1.Descriptor("pip-services-dummies", "factory", "default", "default", "1.0");
 DummyFactory.ControllerDescriptor = new pip_services3_commons_node_1.Descriptor("pip-services-dummies", "controller", "default", "*", "1.0");
-exports.DummyFactory = DummyFactory;
 //# sourceMappingURL=DummyFactory.js.map

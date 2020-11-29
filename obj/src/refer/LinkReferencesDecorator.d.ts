@@ -4,8 +4,8 @@ import { IOpenable } from 'pip-services3-commons-node';
 import { ReferencesDecorator } from './ReferencesDecorator';
 /**
  * References decorator that automatically sets references to newly added components
- * that implement [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.ireferenceable.html IReferenceable interface]] and unsets references from removed components
- * that implement [[https://rawgit.com/pip-services-node/pip-services3-commons-node/master/doc/api/interfaces/refer.iunreferenceable.html IUnreferenceable interface]].
+ * that implement [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.ireferenceable.html IReferenceable interface]] and unsets references from removed components
+ * that implement [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.iunreferenceable.html IUnreferenceable interface]].
  */
 export declare class LinkReferencesDecorator extends ReferencesDecorator implements IOpenable {
     private _opened;
