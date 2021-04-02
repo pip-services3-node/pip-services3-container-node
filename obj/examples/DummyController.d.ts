@@ -11,8 +11,10 @@ export declare class DummyController implements IReferenceable, IReconfigurable,
     private _message;
     private _counter;
     constructor();
-    message: string;
-    counter: number;
+    get message(): string;
+    set message(value: string);
+    get counter(): number;
+    set counter(value: number);
     configure(config: ConfigParams): void;
     setReferences(references: IReferences): void;
     isOpen(): boolean;

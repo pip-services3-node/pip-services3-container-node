@@ -15,28 +15,28 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     public _opened: boolean = false;
 
     /**
-	 * Creates a new instance of the decorator.
-	 * 
-	 * @param nextReferences 		the next references or decorator in the chain.
-	 * @param topReferences 		the decorator at the top of the chain.
-	 */
+     * Creates a new instance of the decorator.
+     * 
+     * @param nextReferences 		the next references or decorator in the chain.
+     * @param topReferences 		the decorator at the top of the chain.
+     */
     public constructor(nextReferences: IReferences, topReferences: IReferences) {
-    	super(nextReferences, topReferences);
+        super(nextReferences, topReferences);
     }
 
     /**
-	 * Checks if the component is opened.
-	 * 
-	 * @returns true if the component has been opened and false otherwise.
+     * Checks if the component is opened.
+     * 
+     * @returns true if the component has been opened and false otherwise.
      */
     public isOpen(): boolean {
         return this._opened;
     }
 
     /**
-	 * Opens the component.
-	 * 
-	 * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * Opens the component.
+     * 
+     * @param correlationId 	(optional) transaction id to trace execution through call chain.
      * @param callback 			callback function that receives error or null no errors occured.
      */
     public open(correlationId: string, callback?: (err: any) => void): void {
@@ -53,29 +53,29 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     }
 
     /**
-	 * Closes component and frees used resources.
-	 * 
-	 * @param correlationId 	(optional) transaction id to trace execution through call chain.
+     * Closes component and frees used resources.
+     * 
+     * @param correlationId 	(optional) transaction id to trace execution through call chain.
      * @param callback 			callback function that receives error or null no errors occured.
      */
     public close(correlationId: string, callback?: (err: any) => void): void {
-        if (this._opened) {
-            let components = this.getAll();
-            Closer.close(correlationId, components, (err) => {
-                this._opened = false;
-                if (callback) callback(err);
-            });
-        } else {
-            if (callback) callback(null);
-        }
+        // if (this._opened) {
+        let components = this.getAll();
+        Closer.close(correlationId, components, (err) => {
+            this._opened = false;
+            if (callback) callback(err);
+        });
+        // } else {
+        //     if (callback) callback(null);
+        // }
     }
 
     /**
-	 * Puts a new reference into this reference map.
-	 * 
-	 * @param locator 	a locator to find the reference by.
-	 * @param component a component reference to be added.
-	 */
+     * Puts a new reference into this reference map.
+     * 
+     * @param locator 	a locator to find the reference by.
+     * @param component a component reference to be added.
+     */
     public put(locator: any, component: any): void {
         super.put(locator, component);
 
@@ -84,15 +84,15 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     }
 
     /**
-	 * Removes a previously added reference that matches specified locator.
-	 * If many references match the locator, it removes only the first one.
-	 * When all references shall be removed, use [[removeAll]] method instead.
-	 * 
-	 * @param locator 	a locator to remove reference
-	 * @returns the removed component reference.
-	 * 
-	 * @see [[removeAll]]
-	 */
+     * Removes a previously added reference that matches specified locator.
+     * If many references match the locator, it removes only the first one.
+     * When all references shall be removed, use [[removeAll]] method instead.
+     * 
+     * @param locator 	a locator to remove reference
+     * @returns the removed component reference.
+     * 
+     * @see [[removeAll]]
+     */
     public remove(locator: any): any {
         let component = super.remove(locator);
 
@@ -103,11 +103,11 @@ export class RunReferencesDecorator extends ReferencesDecorator implements IOpen
     }
 
     /**
-	 * Removes all component references that match the specified locator. 
-	 * 
-	 * @param locator 	the locator to remove references by.
-	 * @returns a list, containing all removed references.
-	 */
+     * Removes all component references that match the specified locator. 
+     * 
+     * @param locator 	the locator to remove references by.
+     * @returns a list, containing all removed references.
+     */
     public removeAll(locator: any): any[] {
         let components = super.removeAll(locator);
 

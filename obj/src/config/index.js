@@ -20,9 +20,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * objects and, if they implement the IConfigurable interface, passes them their configurations.
  */
 var ComponentConfig_1 = require("./ComponentConfig");
-exports.ComponentConfig = ComponentConfig_1.ComponentConfig;
+Object.defineProperty(exports, "ComponentConfig", { enumerable: true, get: function () { return ComponentConfig_1.ComponentConfig; } });
 var ContainerConfig_1 = require("./ContainerConfig");
-exports.ContainerConfig = ContainerConfig_1.ContainerConfig;
+Object.defineProperty(exports, "ContainerConfig", { enumerable: true, get: function () { return ContainerConfig_1.ContainerConfig; } });
 var ContainerConfigReader_1 = require("./ContainerConfigReader");
-exports.ContainerConfigReader = ContainerConfigReader_1.ContainerConfigReader;
+Object.defineProperty(exports, "ContainerConfigReader", { enumerable: true, get: function () { return ContainerConfigReader_1.ContainerConfigReader; } });
 //# sourceMappingURL=index.js.map

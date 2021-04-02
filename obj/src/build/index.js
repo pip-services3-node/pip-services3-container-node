@@ -10,5 +10,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * such as logging and performance monitoring.
  */
 var DefaultContainerFactory_1 = require("./DefaultContainerFactory");
-exports.DefaultContainerFactory = DefaultContainerFactory_1.DefaultContainerFactory;
+Object.defineProperty(exports, "DefaultContainerFactory", { enumerable: true, get: function () { return DefaultContainerFactory_1.DefaultContainerFactory; } });
 //# sourceMappingURL=index.js.map

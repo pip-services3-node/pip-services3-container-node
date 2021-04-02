@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProcessContainer = void 0;
 /** @module core */
 /** @hidden */
 let process = require('process');

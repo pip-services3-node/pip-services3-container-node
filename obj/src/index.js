@@ -1,7 +1,14 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * @module core
@@ -43,11 +50,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * after which objects that implement the [[https://pip-services3-node.github.io/pip-services3-commons-node/interfaces/refer.iunreferenceable.html IUnreferencable interface]] delete various links between
  * objects, and, finally, the contains destroys all objects and turns off.
  */
-__export(require("./build"));
-__export(require("./config"));
-__export(require("./refer"));
+__exportStar(require("./build"), exports);
+__exportStar(require("./config"), exports);
+__exportStar(require("./refer"), exports);
 var Container_1 = require("./Container");
-exports.Container = Container_1.Container;
+Object.defineProperty(exports, "Container", { enumerable: true, get: function () { return Container_1.Container; } });
 var ProcessContainer_1 = require("./ProcessContainer");
-exports.ProcessContainer = ProcessContainer_1.ProcessContainer;
+Object.defineProperty(exports, "ProcessContainer", { enumerable: true, get: function () { return ProcessContainer_1.ProcessContainer; } });
 //# sourceMappingURL=index.js.map

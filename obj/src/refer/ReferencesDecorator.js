@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReferencesDecorator = void 0;
 /**
  * Chainable decorator for IReferences that allows to inject additional capabilities
  * such as automatic component creation, automatic registration and opening.

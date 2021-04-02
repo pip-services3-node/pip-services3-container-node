@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RunReferencesDecorator = void 0;
 const pip_services3_commons_node_1 = require("pip-services3-commons-node");
 const pip_services3_commons_node_2 = require("pip-services3-commons-node");
 const ReferencesDecorator_1 = require("./ReferencesDecorator");
@@ -55,18 +56,16 @@ class RunReferencesDecorator extends ReferencesDecorator_1.ReferencesDecorator {
      * @param callback 			callback function that receives error or null no errors occured.
      */
     close(correlationId, callback) {
-        if (this._opened) {
-            let components = this.getAll();
-            pip_services3_commons_node_2.Closer.close(correlationId, components, (err) => {
-                this._opened = false;
-                if (callback)
-                    callback(err);
-            });
-        }
-        else {
+        // if (this._opened) {
+        let components = this.getAll();
+        pip_services3_commons_node_2.Closer.close(correlationId, components, (err) => {
+            this._opened = false;
             if (callback)
-                callback(null);
-        }
+                callback(err);
+        });
+        // } else {
+        //     if (callback) callback(null);
+        // }
     }
     /**
      * Puts a new reference into this reference map.
