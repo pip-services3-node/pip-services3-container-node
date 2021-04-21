@@ -2,6 +2,7 @@
 import { IFactory } from 'pip-services3-components-node';
 import { CompositeFactory } from 'pip-services3-components-node';
 import { DefaultLoggerFactory } from 'pip-services3-components-node';
+import { DefaultTracerFactory } from 'pip-services3-components-node';
 import { DefaultCountersFactory } from 'pip-services3-components-node';
 import { DefaultConfigReaderFactory } from 'pip-services3-components-node';
 import { DefaultCacheFactory } from 'pip-services3-components-node';
@@ -37,6 +38,7 @@ export class DefaultContainerFactory extends CompositeFactory {
 
         this.add(new DefaultInfoFactory());
         this.add(new DefaultLoggerFactory());
+        this.add(new DefaultTracerFactory());
         this.add(new DefaultCountersFactory());
         this.add(new DefaultConfigReaderFactory());
         this.add(new DefaultCacheFactory());

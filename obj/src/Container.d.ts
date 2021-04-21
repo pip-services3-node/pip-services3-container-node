@@ -71,6 +71,7 @@ import { ContainerReferences } from './refer/ContainerReferences';
  *     });
  */
 export declare class Container implements IConfigurable, IReferenceable, IUnreferenceable, IOpenable {
+    private static ContextInfoDescriptor;
     protected _logger: ILogger;
     protected _factories: DefaultContainerFactory;
     protected _info: ContextInfo;

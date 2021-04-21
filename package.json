@@ -1,6 +1,6 @@
 {
     "name": "pip-services3-container-node",
-    "version": "3.0.6",
+    "version": "3.0.7",
     "author": "Conceptual Vision Consulting LLC",
     "description": "IoC container for Pip.Services in Node.js",
     "contributors": [
@@ -37,11 +37,11 @@
         "pip-services3-components-node": "^3.0.6"
     },
     "devDependencies": {
-        "@types/node": "*",
-        "@types/lodash": "^4.0.0",
         "@types/async": "^2.0.0",
-        "@types/mocha": "*",
         "@types/chai": "*",
+        "@types/lodash": "^4.0.0",
+        "@types/mocha": "*",
+        "@types/node": "*",
         "chai": "^3.5.0",
         "mocha": "^2.2.0"
     }

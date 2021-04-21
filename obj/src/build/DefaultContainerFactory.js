@@ -10,6 +10,7 @@ const pip_services3_components_node_6 = require("pip-services3-components-node")
 const pip_services3_components_node_7 = require("pip-services3-components-node");
 const pip_services3_components_node_8 = require("pip-services3-components-node");
 const pip_services3_components_node_9 = require("pip-services3-components-node");
+const pip_services3_components_node_10 = require("pip-services3-components-node");
 const pip_services3_commons_node_1 = require("pip-services3-commons-node");
 /**
  * Creates default container components (loggers, counters, caches, locks, etc.) by their descriptors.
@@ -32,14 +33,15 @@ class DefaultContainerFactory extends pip_services3_components_node_1.CompositeF
      */
     constructor(...factories) {
         super(...factories);
-        this.add(new pip_services3_components_node_8.DefaultInfoFactory());
+        this.add(new pip_services3_components_node_9.DefaultInfoFactory());
         this.add(new pip_services3_components_node_2.DefaultLoggerFactory());
-        this.add(new pip_services3_components_node_3.DefaultCountersFactory());
-        this.add(new pip_services3_components_node_4.DefaultConfigReaderFactory());
-        this.add(new pip_services3_components_node_5.DefaultCacheFactory());
-        this.add(new pip_services3_components_node_6.DefaultCredentialStoreFactory());
-        this.add(new pip_services3_components_node_7.DefaultDiscoveryFactory());
-        this.add(new pip_services3_components_node_9.DefaultTestFactory());
+        this.add(new pip_services3_components_node_3.DefaultTracerFactory());
+        this.add(new pip_services3_components_node_4.DefaultCountersFactory());
+        this.add(new pip_services3_components_node_5.DefaultConfigReaderFactory());
+        this.add(new pip_services3_components_node_6.DefaultCacheFactory());
+        this.add(new pip_services3_components_node_7.DefaultCredentialStoreFactory());
+        this.add(new pip_services3_components_node_8.DefaultDiscoveryFactory());
+        this.add(new pip_services3_components_node_10.DefaultTestFactory());
     }
 }
 exports.DefaultContainerFactory = DefaultContainerFactory;

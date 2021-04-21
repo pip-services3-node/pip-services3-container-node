@@ -7,7 +7,6 @@ const pip_services3_commons_node_2 = require("pip-services3-commons-node");
 const pip_services3_components_node_1 = require("pip-services3-components-node");
 const pip_services3_components_node_2 = require("pip-services3-components-node");
 const pip_services3_components_node_3 = require("pip-services3-components-node");
-const pip_services3_components_node_4 = require("pip-services3-components-node");
 const DefaultContainerFactory_1 = require("./build/DefaultContainerFactory");
 const ContainerConfig_1 = require("./config/ContainerConfig");
 const ContainerConfigReader_1 = require("./config/ContainerConfigReader");
@@ -121,9 +120,9 @@ class Container {
         // Override in child classes
     }
     initReferences(references) {
-        let existingInfo = references.getOneOptional(pip_services3_components_node_4.DefaultInfoFactory.ContextInfoDescriptor);
+        let existingInfo = references.getOneOptional(Container.ContextInfoDescriptor);
         if (existingInfo == null)
-            references.put(pip_services3_components_node_4.DefaultInfoFactory.ContextInfoDescriptor, this._info);
+            references.put(Container.ContextInfoDescriptor, this._info);
         else
             this._info = existingInfo;
         references.put(DefaultContainerFactory_1.DefaultContainerFactory.Descriptor, this._factories);
@@ -229,4 +228,5 @@ class Container {
     }
 }
 exports.Container = Container;
+Container.ContextInfoDescriptor = new pip_services3_commons_node_1.Descriptor("pip-services", "context-info", "default", "default", "1.0");
 //# sourceMappingURL=Container.js.map

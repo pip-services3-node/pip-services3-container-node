@@ -81,6 +81,8 @@ import { ContainerReferences } from './refer/ContainerReferences';
  *     });
  */
 export class Container implements IConfigurable, IReferenceable, IUnreferenceable, IOpenable {
+    private static ContextInfoDescriptor = new Descriptor("pip-services", "context-info", "default", "default", "1.0");
+
     protected _logger: ILogger = new NullLogger();
     protected _factories: DefaultContainerFactory = new DefaultContainerFactory();
     protected _info: ContextInfo;
@@ -137,9 +139,9 @@ export class Container implements IConfigurable, IReferenceable, IUnreferenceabl
     }
 
     private initReferences(references: IReferences): void {
-        let existingInfo = references.getOneOptional<ContextInfo>(DefaultInfoFactory.ContextInfoDescriptor);
+        let existingInfo = references.getOneOptional<ContextInfo>(Container.ContextInfoDescriptor);
         if (existingInfo == null)
-            references.put(DefaultInfoFactory.ContextInfoDescriptor, this._info);
+            references.put(Container.ContextInfoDescriptor, this._info);
         else this._info = existingInfo;
         
         references.put(DefaultContainerFactory.Descriptor, this._factories);
