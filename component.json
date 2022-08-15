@@ -1,6 +1,6 @@
 {
     "name":  "pip-services3-container-node",
-    "type": "microservice",
+    "type": "module",
     "language": "node",
     "version": "3.0.7",
     "build": 0,
